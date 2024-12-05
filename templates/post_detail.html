@@ -1,18 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>{{ post.title }}</h1>
-<p>{{ post.content }}</p>
-<hr>
-<h2>Comments</h2>
-<ul>
-    {% for comment in comments %}
-        <li>
-            Author: {{ comment.author }}, Text: {{ comment.text }}
-            (<a href="/comment/{{ comment.id }}/edit/">Edit</a> | 
-            <a href="/comment/{{ comment.id }}/delete/">Delete</a>)
-        </li>
-    {% endfor %}
-</ul>
-<a href="/post/{{ post.id }}/add_comment/">Add Comment</a>
-<a href="/">Back to Blog List</a>
+<div class="post-container">
+    <div class="post-content">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <p class="post-body">{{ post.content }}</p>
+    </div>
+    <hr>
+    <div class="comments-section">
+        <h2>Comments</h2>
+        <ul class="comments-list">
+            {% for comment in comments %}
+                <li class="comment-item">
+                    <p><strong>Author:</strong> {{ comment.author }}</p>
+                    <p>{{ comment.text }}</p>
+                    <div class="comment-actions">
+                        <a href="/comment/{{ comment.id }}/edit/" class="btn btn-edit">Edit</a>
+                        <a href="/comment/{{ comment.id }}/delete/" class="btn btn-delete">Delete</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="comment-buttons">
+            <a href="/post/{{ post.id }}/add_comment/" class="btn btn-add">Add Comment</a>
+            <a href="/" class="btn btn-cancel">Back to Blog List</a>
+        </div>
+    </div>
+</div>
 {% endblock %}

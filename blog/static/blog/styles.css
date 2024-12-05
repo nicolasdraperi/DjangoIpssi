@@ -197,3 +197,137 @@ body {
 }
 
 
+/*
+formulaire
+ */
+
+/* Centrer le formulaire et le rendre plus grand */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Ajuste pour inclure la navbar */
+    background-color: #f9fafb;
+    padding: 40px; /* Plus de padding pour un meilleur espace */
+    border-radius: 8px;
+    max-width: 600px; /* Augmente la largeur max */
+    margin: 0 auto;
+}
+
+/* Champs du formulaire */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px; /* Texte plus grand */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px; /* Champs plus grands */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Boutons */
+.btn {
+    text-decoration: none;
+    padding: 12px 20px; /* Boutons plus grands */
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-save:hover {
+    background-color: #0056b3;
+}
+
+.btn-cancel {
+    color: #007bff;
+    background-color: transparent;
+    border: 1px solid #007bff;
+}
+
+.btn-cancel:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+/*
+Post detail
+*/
+
+.post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-body {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.comments-section {
+    margin-top: 30px;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-item p {
+    margin: 0;
+    color: #444;
+}
+
+.comment-actions {
+    margin-top: 10px;
+}
+
+.comment-actions .btn {
+    margin-right: 10px;
+}
+
+.comment-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.comment-buttons .btn {
+    margin-right: 15px;
+}
+

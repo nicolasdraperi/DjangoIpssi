@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Are you sure you want to delete the comment by {{ comment.author }}?</h1>
-<p>"{{ comment.text }}"</p>
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Yes, Delete</button>
-    <a href="/post/{{ comment.post.id }}/">Cancel</a>
-</form>
+<div class="form-container">
+    <h1>Delete Comment</h1>
+    <p>Are you sure you want to delete the comment by <strong>{{ comment.author }}</strong>?</p>
+    <blockquote>"{{ comment.text }}"</blockquote>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+        <a href="/post/{{ comment.post.id }}/" class="btn btn-cancel">Cancel</a>
+    </form>
+</div>
 {% endblock %}

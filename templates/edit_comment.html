@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Edit Comment</h1>
-<form method="post">
-    {% csrf_token %}
-    <label for="text">Text:</label>
-    <textarea name="text" id="text">{{ form.text.value }}</textarea>
-    <br>
-    <label for="author">Author:</label>
-    <input type="text" name="author" id="author" value="{{ form.author.value }}">
-    <br>
-    <button type="submit">Save Changes</button>
-    <a href="{% url 'post_detail' comment.post.id %}">Cancel</a>
-</form>
+<div class="form-container">
+    <h1>Edit Comment</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="author">Author:</label>
+        <input type="text" name="author" id="author" value="{{ form.author.value }}">
+        <label for="text">Text:</label>
+        <textarea name="text" id="text">{{ form.text.value }}</textarea>
+        <button type="submit" class="btn btn-save">Save Changes</button>
+        <a href="{% url 'post_detail' comment.post.id %}" class="btn btn-cancel">Cancel</a>
+    </form>
+</div>
 {% endblock %}
