@@ -7,7 +7,6 @@ form {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -50,3 +49,151 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Conteneur principal */
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Table */
+.post-table {
+    width: 100%;
+    border-collapse: collapse; /* Évite les bordures en double */
+    background-color: #ffffff;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* En-tête de la table */
+.post-table thead {
+    background-color: #e9f5ff;
+}
+
+.post-table th {
+    text-align: left;
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Corps de la table */
+.post-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Boutons */
+.btn {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-view {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+}
+
+.btn-edit {
+    background: linear-gradient(to right, #fbc02d, #fdd835);
+    color: white;
+}
+
+.btn-delete {
+    background: linear-gradient(to right, #e57373, #f44336);
+    color: white;
+}
+
+.btn-create {
+    background: linear-gradient(to right, #42a5f5, #1e88e5);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+
+/* Supprime les bordures supplémentaires */
+.post-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+/* navbar
+
+ */
+
+/* Navbar */
+/* Navbar */
+.navbar {
+    background-color: #1565c0;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #1e88e5;
+    color: #ffffff;
+}
+
+

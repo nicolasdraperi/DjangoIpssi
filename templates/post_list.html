@@ -1,15 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Blog Posts</h1>
-<ul>
-    {% for post in posts %}
-        <li>
-            {{ post.title }} 
-            (<a href="/post/{{ post.id }}/">View</a> | 
-            <a href="/post/{{ post.id }}/edit/">Edit</a> | 
-            <a href="/post/{{ post.id }}/delete/">Delete</a>)
-        </li>
-    {% endfor %}
-</ul>
-<a href="/post/create/">Create New Post</a>
+<div class="container">
+    <h1>Blog Posts</h1>
+    <table class="post-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+                <tr>
+                    <td>{{ post.title }}</td>
+                    <td>
+                        <a href="/post/{{ post.id }}/" class="btn btn-view">View</a>
+                        <a href="/post/{{ post.id }}/edit/" class="btn btn-edit">Edit</a>
+                        <a href="/post/{{ post.id }}/delete/" class="btn btn-delete">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="create-post">
+        <a href="/post/create/" class="btn btn-create">Create New Post</a>
+    </div>
+</div>
 {% endblock %}
